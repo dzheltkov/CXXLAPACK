@@ -1,0 +1,4 @@
+#include <cstdint>
+#cmakedefine CXXLAPACK_INT @CXXLAPACK_INT@
+#cmakedefine CXXLAPACK_LAPACK
+#cmakedefine CXXLAPACK_TEMPLATES
