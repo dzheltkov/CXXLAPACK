@@ -1,7 +1,7 @@
 #ifndef CXXLAPACK_HPP
 #define CXXLAPACK_HPP
 #include <complex>
-#include "CXXLAPACK_config.h.in"
+#include "CXXLAPACK_config.h"
 
 #ifdef CXXLAPACK_LAPACK
 #include "CXXLAPACK/Auxiliary.h"
