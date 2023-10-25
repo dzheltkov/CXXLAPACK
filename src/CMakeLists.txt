@@ -14,3 +14,4 @@ add_library(cxxlapack Auxiliary/lacgv.cpp
 
 target_include_directories(cxxlapack PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/mangleinclude)
 target_link_libraries(cxxlapack PUBLIC LAPACK::LAPACK)
+target_compile_definitions(cxxlapack PRIVATE $<$<CONFIG:Debug>:DEBUG>)
