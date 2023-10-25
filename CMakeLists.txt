@@ -8,7 +8,7 @@ include(cmake/options.cmake)
 
 include(cmake/flags.cmake)
 
-configure_file(CXXLAPACK_config.h.in ${PROJECT_BINARY_DIR}/include/CXXLAPACK_config.h)
+configure_file(CXXLAPACK_config.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/CXXLAPACK_config.h)
 
 if (CXXLAPACK_LAPACK)
     add_subdirectory(src)
