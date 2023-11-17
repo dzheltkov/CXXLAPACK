@@ -8,6 +8,7 @@ FortranCInterface_HEADER(mangleinclude/LAPACKFortranMangle.h MACRO_NAMESPACE "LA
 add_library(cxxlapack Auxiliary/lacgv.cpp
                       Auxiliary/larfg.cpp
                       Auxiliary/lartg.cpp
+                      Auxiliary/lanhe.cpp
                       LinearEquation/tptrs.cpp
                       LinearEquation/potrf.cpp
                       LeastSquares/unmqr.cpp
