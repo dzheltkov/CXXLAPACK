@@ -9,6 +9,7 @@ add_library(cxxlapack Auxiliary/lacgv.cpp
                       Auxiliary/larfg.cpp
                       Auxiliary/lartg.cpp
                       LinearEquation/tptrs.cpp
+                      LinearEquation/potrf.cpp
                       LeastSquares/unmqr.cpp
 )
 

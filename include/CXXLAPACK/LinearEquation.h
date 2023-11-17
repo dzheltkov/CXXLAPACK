@@ -12,6 +12,10 @@ namespace LAPACK
                         const float *AP,
                         float *B, const CXXLAPACK_INT &ldB);
 
+    CXXLAPACK_INT potrf(const char &uplo,
+                        const CXXLAPACK_INT &n,
+                        float *A, const CXXLAPACK_INT &ldA);
+
 
 
 
@@ -25,6 +29,10 @@ namespace LAPACK
                         const double *AP,
                         double *B, const CXXLAPACK_INT &ldB);
 
+    CXXLAPACK_INT potrf(const char &uplo,
+                        const CXXLAPACK_INT &n,
+                        double *A, const CXXLAPACK_INT &ldA);
+
 
 
     // std::complex<float> variants of LAPACK functions
@@ -37,6 +45,10 @@ namespace LAPACK
                         const std::complex<float> *AP,
                         std::complex<float> *B, const CXXLAPACK_INT &ldB);
 
+    CXXLAPACK_INT potrf(const char &uplo,
+                        const CXXLAPACK_INT &n,
+                        std::complex<float> *A, const CXXLAPACK_INT &ldA);
+
 
 
     // std::complex<double> variants of LAPACK functions
@@ -48,6 +60,10 @@ namespace LAPACK
                         const CXXLAPACK_INT &nrhs,
                         const std::complex<double> *AP,
                         std::complex<double> *B, const CXXLAPACK_INT &ldB);
+
+    CXXLAPACK_INT potrf(const char &uplo,
+                        const CXXLAPACK_INT &n,
+                        std::complex<double> *A, const CXXLAPACK_INT &ldA);
 }
 #endif
 
