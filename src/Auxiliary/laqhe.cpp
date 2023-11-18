@@ -15,7 +15,7 @@ extern "C"
                 const float *s,
                 const float &scond,
                 const float &amax,
-                char Equed);
+                char &Equed);
 
     void dlaqhe(const char &UpperLower,
                 const CXXLAPACK_INT &n,
@@ -23,7 +23,7 @@ extern "C"
                 const double *s,
                 const double &scond,
                 const double &amax,
-                char Equed);
+                char &Equed);
 
     void claqhe(const char &UpperLower,
                 const CXXLAPACK_INT &n,
@@ -31,7 +31,7 @@ extern "C"
                 const float *s,
                 const float &scond,
                 const float &amax,
-                char Equed);
+                char &Equed);
 
     void zlaqhe(const char &UpperLower,
                 const CXXLAPACK_INT &n,
@@ -39,7 +39,7 @@ extern "C"
                 const double *s,
                 const double &scond,
                 const double &amax,
-                char Equed);
+                char &Equed);
 }
 
 namespace LAPACK
@@ -51,7 +51,7 @@ namespace LAPACK
                const float &scond,
                const float &amax)
     {
-        char equed;
+        char equed = 'Y';
         slaqhe(UpperLower, n, A, ldA, s, scond, amax, equed);
         return (equed == 'Y');
     }
@@ -63,7 +63,7 @@ namespace LAPACK
                const double &scond,
                const double &amax)
     {
-        char equed;
+        char equed = 'Y';
         dlaqhe(UpperLower, n, A, ldA, s, scond, amax, equed);
         return (equed == 'Y');
     }
@@ -75,7 +75,7 @@ namespace LAPACK
                const float &scond,
                const float &amax)
     {
-        char equed;
+        char equed = 'Y';
         claqhe(UpperLower, n, A, ldA, s, scond, amax, equed);
         return (equed == 'Y');
     }
@@ -87,7 +87,7 @@ namespace LAPACK
                const double &scond,
                const double &amax)
     {
-        char equed;
+        char equed = 'Y';
         zlaqhe(UpperLower, n, A, ldA, s, scond, amax, equed);
         return (equed == 'Y');
     }
