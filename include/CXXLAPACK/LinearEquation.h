@@ -16,6 +16,18 @@ namespace LAPACK
                         const CXXLAPACK_INT &n,
                         float *A, const CXXLAPACK_INT &ldA);
 
+    CXXLAPACK_INT poequ(const CXXLAPACK_INT &n,
+                        const float *A, const CXXLAPACK_INT &ldA,
+                        float *s,
+                        float &scond,
+                        float &amax);
+
+    CXXLAPACK_INT poequb(const CXXLAPACK_INT &n,
+                         const float *A, const CXXLAPACK_INT &ldA,
+                         float *s,
+                         float &scond,
+                         float &amax);
+
 
 
 
@@ -33,6 +45,18 @@ namespace LAPACK
                         const CXXLAPACK_INT &n,
                         double *A, const CXXLAPACK_INT &ldA);
 
+    CXXLAPACK_INT poequ(const CXXLAPACK_INT &n,
+                        const double *A, const CXXLAPACK_INT &ldA,
+                        double *s,
+                        double &scond,
+                        double &amax);
+
+    CXXLAPACK_INT poequb(const CXXLAPACK_INT &n,
+                         const double *A, const CXXLAPACK_INT &ldA,
+                         double *s,
+                         double &scond,
+                         double &amax);
+
 
 
     // std::complex<float> variants of LAPACK functions
@@ -49,6 +73,18 @@ namespace LAPACK
                         const CXXLAPACK_INT &n,
                         std::complex<float> *A, const CXXLAPACK_INT &ldA);
 
+    CXXLAPACK_INT poequ(const CXXLAPACK_INT &n,
+                        const std::complex<float> *A, const CXXLAPACK_INT &ldA,
+                        float *s,
+                        float &scond,
+                        float &amax);
+
+    CXXLAPACK_INT poequb(const CXXLAPACK_INT &n,
+                         const std::complex<float> *A, const CXXLAPACK_INT &ldA,
+                         float *s,
+                         float &scond,
+                         float &amax);
+
 
 
     // std::complex<double> variants of LAPACK functions
@@ -64,6 +100,18 @@ namespace LAPACK
     CXXLAPACK_INT potrf(const char &uplo,
                         const CXXLAPACK_INT &n,
                         std::complex<double> *A, const CXXLAPACK_INT &ldA);
+
+    CXXLAPACK_INT poequ(const CXXLAPACK_INT &n,
+                        const std::complex<double> *A, const CXXLAPACK_INT &ldA,
+                        double *s,
+                        double &scond,
+                        double &amax);
+
+    CXXLAPACK_INT poequb(const CXXLAPACK_INT &n,
+                         const std::complex<double> *A, const CXXLAPACK_INT &ldA,
+                         double *s,
+                         double &scond,
+                         double &amax);
 }
 #endif
 

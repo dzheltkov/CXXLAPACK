@@ -27,6 +27,13 @@ namespace LAPACK
                 const CXXLAPACK_INT &ldA,
                 float *work = nullptr);
 
+    bool laqhe(const char &UpperLower,
+               const CXXLAPACK_INT& n,
+               float *A, const CXXLAPACK_INT&ldA,
+               const float *s,
+               const float &scond,
+               const float &amax);
+
 
 
 
@@ -56,6 +63,13 @@ namespace LAPACK
                 const CXXLAPACK_INT &ldA,
                 double *work = nullptr);
 
+    bool laqhe(const char &UpperLower,
+               const CXXLAPACK_INT& n,
+               double *A, const CXXLAPACK_INT&ldA,
+               const double *s,
+               const double &scond,
+               const double &amax);
+
 
     // std::complex<float> variants of LAPACK functions
 
@@ -81,6 +95,13 @@ namespace LAPACK
                 std::complex<float> *A,
                 const CXXLAPACK_INT &ldA,
                 float *work = nullptr);
+
+    bool laqhe(const char &UpperLower,
+               const CXXLAPACK_INT& n,
+               std::complex<float> *A, const CXXLAPACK_INT&ldA,
+               const float *s,
+               const float &scond,
+               const float &amax);
 
 
 
@@ -108,6 +129,13 @@ namespace LAPACK
                 std::complex<double> *A,
                 const CXXLAPACK_INT &ldA,
                 double *work = nullptr);
+
+    bool laqhe(const char &UpperLower,
+               const CXXLAPACK_INT& n,
+               std::complex<double> *A, const CXXLAPACK_INT&ldA,
+               const double *s,
+               const double &scond,
+               const double &amax);
 }
 #endif
 
