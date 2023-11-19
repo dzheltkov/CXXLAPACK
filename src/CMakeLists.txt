@@ -12,6 +12,7 @@ add_library(cxxlapack Auxiliary/lacgv.cpp
                       Auxiliary/laqhe.cpp
                       LinearEquation/tptrs.cpp
                       LinearEquation/potrf.cpp
+                      LinearEquation/potrs.cpp
                       LinearEquation/poequ.cpp
                       LinearEquation/poequb.cpp
                       LeastSquares/unmqr.cpp

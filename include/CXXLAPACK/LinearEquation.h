@@ -16,6 +16,12 @@ namespace LAPACK
                         const CXXLAPACK_INT &n,
                         float *A, const CXXLAPACK_INT &ldA);
 
+    CXXLAPACK_INT potrs(const char &uplo,
+                        const CXXLAPACK_INT &n,
+                        const CXXLAPACK_INT &nrhs,
+                        const float *A, const CXXLAPACK_INT &ldA,
+                        float *B, const CXXLAPACK_INT &ldB);
+
     CXXLAPACK_INT poequ(const CXXLAPACK_INT &n,
                         const float *A, const CXXLAPACK_INT &ldA,
                         float *s,
@@ -45,6 +51,12 @@ namespace LAPACK
                         const CXXLAPACK_INT &n,
                         double *A, const CXXLAPACK_INT &ldA);
 
+    CXXLAPACK_INT potrs(const char &uplo,
+                        const CXXLAPACK_INT &n,
+                        const CXXLAPACK_INT &nrhs,
+                        const double *A, const CXXLAPACK_INT &ldA,
+                        double *B, const CXXLAPACK_INT &ldB);
+
     CXXLAPACK_INT poequ(const CXXLAPACK_INT &n,
                         const double *A, const CXXLAPACK_INT &ldA,
                         double *s,
@@ -73,6 +85,12 @@ namespace LAPACK
                         const CXXLAPACK_INT &n,
                         std::complex<float> *A, const CXXLAPACK_INT &ldA);
 
+    CXXLAPACK_INT potrs(const char &uplo,
+                        const CXXLAPACK_INT &n,
+                        const CXXLAPACK_INT &nrhs,
+                        const std::complex<float> *A, const CXXLAPACK_INT &ldA,
+                        std::complex<float> *B, const CXXLAPACK_INT &ldB);
+
     CXXLAPACK_INT poequ(const CXXLAPACK_INT &n,
                         const std::complex<float> *A, const CXXLAPACK_INT &ldA,
                         float *s,
@@ -100,6 +118,12 @@ namespace LAPACK
     CXXLAPACK_INT potrf(const char &uplo,
                         const CXXLAPACK_INT &n,
                         std::complex<double> *A, const CXXLAPACK_INT &ldA);
+
+    CXXLAPACK_INT potrs(const char &uplo,
+                        const CXXLAPACK_INT &n,
+                        const CXXLAPACK_INT &nrhs,
+                        const std::complex<double> *A, const CXXLAPACK_INT &ldA,
+                        std::complex<double> *B, const CXXLAPACK_INT &ldB);
 
     CXXLAPACK_INT poequ(const CXXLAPACK_INT &n,
                         const std::complex<double> *A, const CXXLAPACK_INT &ldA,
