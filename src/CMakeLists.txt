@@ -5,7 +5,8 @@ FortranCInterface_VERIFY(CXX)
 find_package(LAPACK REQUIRED)
 FortranCInterface_HEADER(mangleinclude/LAPACKFortranMangle.h MACRO_NAMESPACE "LAPACK_")
 
-add_library(cxxlapack Auxiliary/lacgv.cpp
+add_library(cxxlapack LAPACK_compatability.f90
+                      Auxiliary/lacgv.cpp
                       Auxiliary/larfg.cpp
                       Auxiliary/lartg.cpp
                       Auxiliary/lanhe.cpp

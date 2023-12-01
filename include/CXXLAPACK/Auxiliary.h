@@ -89,7 +89,7 @@ namespace LAPACK
                std::complex<float> &s,
                std::complex<float> &r);
 
-    std::complex<float> lanhe(const char &Norm,
+    float lanhe(const char &Norm,
                 const char &UpperLower,
                 const CXXLAPACK_INT &n,
                 std::complex<float> *A,
@@ -123,12 +123,12 @@ namespace LAPACK
                std::complex<double> &s,
                std::complex<double> &r);
 
-    std::complex<double> lanhe(const char &Norm,
-                const char &UpperLower,
-                const CXXLAPACK_INT &n,
-                std::complex<double> *A,
-                const CXXLAPACK_INT &ldA,
-                double *work = nullptr);
+    double lanhe(const char &Norm,
+                 const char &UpperLower,
+                 const CXXLAPACK_INT &n,
+                 std::complex<double> *A,
+                 const CXXLAPACK_INT &ldA,
+                 double *work = nullptr);
 
     bool laqhe(const char &UpperLower,
                const CXXLAPACK_INT& n,
