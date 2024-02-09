@@ -17,6 +17,8 @@ add_library(cxxlapack LAPACK_compatability.f90
                       LinearEquation/poequ.cpp
                       LinearEquation/poequb.cpp
                       LeastSquares/unmqr.cpp
+                      SVD/gesdd.cpp
+                      SVD/heevx.cpp
 )
 
 target_include_directories(cxxlapack PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/mangleinclude)
