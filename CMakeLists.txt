@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.18)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
 project(CXXLAPACK VERSION 0.1 DESCRIPTION "C++ interface to LAPACK functions" LANGUAGES CXX C Fortran)
 
 include(cmake/common.cmake)
@@ -19,6 +19,7 @@ if (CXXLAPACK_LAPACK)
 endif()
 
 if (CXXLAPACK_TEMPLATES)
+    set(CMAKE_CXX_STANDARD 17)
     find_package(OpenMP COMPONENTS CXX REQUIRED)
     add_subdirectory(../CXXBLAS ${CMAKE_CURRENT_BINARY_DIR}/CXXBLAS)
     #find_package(CXXBLAS REQUIRED)
