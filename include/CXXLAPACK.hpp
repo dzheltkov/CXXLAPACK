@@ -7,6 +7,7 @@
 #include "CXXLAPACK/Auxiliary.h"
 #include "CXXLAPACK/LeastSquares.h"
 #include "CXXLAPACK/LinearEquation.h"
+#include "CXXLAPACK/OrthogonalFactorizations.h"
 #endif
 
 #ifdef CXXLAPACK_TEMPLATES

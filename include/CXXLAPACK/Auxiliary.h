@@ -20,6 +20,15 @@ namespace LAPACK
                float &s,
                float &r);
 
+    void lacpy(const char &UPLO,
+               const CXXLAPACK_INT &m,
+               const CXXLAPACK_INT &n,
+               const float *A,
+               const CXXLAPACK_INT &ldA,
+               float* B,
+               const CXXLAPACK_INT &ldB);
+
+
     float lanhe(const char &Norm,
                 const char &UpperLower,
                 const CXXLAPACK_INT &n,
@@ -55,6 +64,14 @@ namespace LAPACK
                double &c,
                double &s,
                double &r);
+    
+    void lacpy(const char &UPLO,
+               const CXXLAPACK_INT &m,
+               const CXXLAPACK_INT &n,
+               const double *A,
+               const CXXLAPACK_INT &ldA,
+               double* B,
+               const CXXLAPACK_INT &ldB);
 
     double lanhe(const char &Norm,
                 const char &UpperLower,
@@ -89,6 +106,14 @@ namespace LAPACK
                std::complex<float> &s,
                std::complex<float> &r);
 
+    void lacpy(const char &UPLO,
+               const CXXLAPACK_INT &m,
+               const CXXLAPACK_INT &n,
+               const std::complex<float> *A,
+               const CXXLAPACK_INT &ldA,
+               std::complex<float> *B,
+               const CXXLAPACK_INT &ldB);
+    
     float lanhe(const char &Norm,
                 const char &UpperLower,
                 const CXXLAPACK_INT &n,
@@ -122,6 +147,14 @@ namespace LAPACK
                double &c,
                std::complex<double> &s,
                std::complex<double> &r);
+    
+    void lacpy(const char &UPLO,
+               const CXXLAPACK_INT &m,
+               const CXXLAPACK_INT &n,
+               const std::complex<double> *A,
+               const CXXLAPACK_INT &ldA,
+               std::complex<double> *B,
+               const CXXLAPACK_INT &ldB);
 
     double lanhe(const char &Norm,
                  const char &UpperLower,
