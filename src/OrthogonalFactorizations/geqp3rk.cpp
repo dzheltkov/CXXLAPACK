@@ -17,8 +17,7 @@ extern "C"
                   float &maxc2nrmk, float &realmaxc2nrmk,
                   CXXLAPACK_INT *jpiv,
                   float *tau,
-                  float *work, const CXXLAPACK_INT& lwork,
-                  float* rwork, CXXLAPACK_INT *iwork,
+                  float *work, const CXXLAPACK_INT& lwork, CXXLAPACK_INT *iwork,
                   CXXLAPACK_INT &info);
     
     void dgeqp3rk(const CXXLAPACK_INT &m, const CXXLAPACK_INT &n,
@@ -29,8 +28,7 @@ extern "C"
                   double &maxc2nrmk, double &realmaxc2nrmk,
                   CXXLAPACK_INT *jpiv,
                   double *tau,
-                  double *work, const CXXLAPACK_INT& lwork,
-                  double* rwork, CXXLAPACK_INT *iwork,
+                  double *work, const CXXLAPACK_INT& lwork, CXXLAPACK_INT *iwork,
                   CXXLAPACK_INT &info);
     
     void cgeqp3rk(const CXXLAPACK_INT &m, const CXXLAPACK_INT &n,
@@ -77,18 +75,18 @@ namespace LAPACK
     {
         CXXLAPACK_INT info;
         bool to_free = false;
-        auto* rwork = new float[2 * n];
+     //   auto* rwork = new float[2 * n];
         auto* iwork = new CXXLAPACK_INT[n - 1];
         if (work == nullptr)
         {
             float tmp;
             lwork = -1;
-            sgeqp3rk(m, n, nrhs, kmax, abstol, reltol, A, LDA, k, maxc2nrmk, realmaxc2nrmk, jpiv, tau, &tmp, lwork, rwork, iwork, info);
+            sgeqp3rk(m, n, nrhs, kmax, abstol, reltol, A, LDA, k, maxc2nrmk, realmaxc2nrmk, jpiv, tau, &tmp, lwork, iwork, info);
             lwork = tmp;
             work = new float[lwork];
             to_free = true;
         }
-        sgeqp3rk(m, n, nrhs, kmax, abstol, reltol, A, LDA, k, maxc2nrmk, realmaxc2nrmk, jpiv, tau, work, lwork, rwork, iwork, info);
+        sgeqp3rk(m, n, nrhs, kmax, abstol, reltol, A, LDA, k, maxc2nrmk, realmaxc2nrmk, jpiv, tau, work, lwork, iwork, info);
         for (auto* j = jpiv; j < jpiv + n; j++) {
             *j -= 1;
         }
@@ -96,7 +94,7 @@ namespace LAPACK
         {
             delete[] work;
         }
-        delete[] rwork;
+    //    delete[] rwork;
         delete[] iwork;
         return info;
     }
@@ -118,18 +116,18 @@ namespace LAPACK
     {
         CXXLAPACK_INT info;
         bool to_free = false;
-        auto* rwork = new double[2 * n];
+    //    auto* rwork = new double[2 * n];
         auto* iwork = new CXXLAPACK_INT[n - 1];
         if (work == nullptr)
         {
             double tmp;
             lwork = -1;
-            dgeqp3rk(m, n, nrhs, kmax, abstol, reltol, A, LDA, k, maxc2nrmk, realmaxc2nrmk, jpiv, tau, &tmp, lwork, rwork, iwork, info);
+            dgeqp3rk(m, n, nrhs, kmax, abstol, reltol, A, LDA, k, maxc2nrmk, realmaxc2nrmk, jpiv, tau, &tmp, lwork, iwork, info);
             lwork = tmp;
             work = new double[lwork];
             to_free = true;
         }
-        dgeqp3rk(m, n, nrhs, kmax, abstol, reltol, A, LDA, k, maxc2nrmk, realmaxc2nrmk, jpiv, tau, work, lwork, rwork, iwork, info);
+        dgeqp3rk(m, n, nrhs, kmax, abstol, reltol, A, LDA, k, maxc2nrmk, realmaxc2nrmk, jpiv, tau, work, lwork, iwork, info);
         for (auto* j = jpiv; j < jpiv + n; j++) {
             *j -= 1;
         }
@@ -137,7 +135,7 @@ namespace LAPACK
         {
             delete[] work;
         }
-        delete[] rwork;
+      //  delete[] rwork;
         delete[] iwork;
         return info;
     }
