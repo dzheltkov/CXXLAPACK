@@ -19,6 +19,14 @@ namespace LAPACK
                         const float *tau,
                         float *work = nullptr, CXXLAPACK_INT lwork = 0);
     
+    CXXLAPACK_INT geqp3(const CXXLAPACK_INT &m,
+                        const CXXLAPACK_INT &n,
+                        float *A,
+                        const CXXLAPACK_INT &LDA,
+                        CXXLAPACK_INT *jpiv,
+                        float *tau,
+                        float *work = nullptr, CXXLAPACK_INT lwork = 0);
+    
     CXXLAPACK_INT geqp3rk(const CXXLAPACK_INT &m,
                           const CXXLAPACK_INT &n,
                           const CXXLAPACK_INT &nrhs,
@@ -50,6 +58,14 @@ namespace LAPACK
                         const double *A,
                         const CXXLAPACK_INT &LDA,
                         const double *tau,
+                        double *work = nullptr, CXXLAPACK_INT lwork = 0);
+    
+    CXXLAPACK_INT geqp3(const CXXLAPACK_INT &m,
+                        const CXXLAPACK_INT &n,
+                        double *A,
+                        const CXXLAPACK_INT &LDA,
+                        CXXLAPACK_INT *jpiv,
+                        double *tau,
                         double *work = nullptr, CXXLAPACK_INT lwork = 0);
     
     CXXLAPACK_INT geqp3rk(const CXXLAPACK_INT &m,
@@ -86,6 +102,14 @@ namespace LAPACK
                         const std::complex<float> *tau,
                         std::complex<float> *work = nullptr, CXXLAPACK_INT lwork = 0);
     
+    CXXLAPACK_INT geqp3(const CXXLAPACK_INT &m,
+                        const CXXLAPACK_INT &n,
+                        std::complex<float> *A,
+                        const CXXLAPACK_INT &LDA,
+                        CXXLAPACK_INT *jpiv,
+                        std::complex<float> *tau,
+                        std::complex<float> *work = nullptr, CXXLAPACK_INT lwork = 0);
+    
     CXXLAPACK_INT geqp3rk(const CXXLAPACK_INT &m,
                           const CXXLAPACK_INT &n,
                           const CXXLAPACK_INT &nrhs,
@@ -117,6 +141,14 @@ namespace LAPACK
                         const std::complex<double> *A,
                         const CXXLAPACK_INT &LDA,
                         const std::complex<double>* tau,
+                        std::complex<double> *work = nullptr, CXXLAPACK_INT lwork = 0);
+    
+    CXXLAPACK_INT geqp3(const CXXLAPACK_INT &m,
+                        const CXXLAPACK_INT &n,
+                        std::complex<double> *A,
+                        const CXXLAPACK_INT &LDA,
+                        CXXLAPACK_INT *jpiv,
+                        std::complex<double> *tau,
                         std::complex<double> *work = nullptr, CXXLAPACK_INT lwork = 0);
     
     CXXLAPACK_INT geqp3rk(const CXXLAPACK_INT &m,

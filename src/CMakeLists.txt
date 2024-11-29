@@ -20,6 +20,7 @@ add_library(cxxlapack LAPACK_compatability.f90
                       LeastSquares/unmqr.cpp
                       OrthogonalFactorizations/geqrf.cpp
                       OrthogonalFactorizations/ungqr.cpp
+                      OrthogonalFactorizations/geqp3.cpp
                       OrthogonalFactorizations/geqp3rk.cpp
 )
 
