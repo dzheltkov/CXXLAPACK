@@ -34,6 +34,11 @@ namespace LAPACK
                          float &scond,
                          float &amax);
 
+    CXXLAPACK_INT getrf(const CXXLAPACK_INT &m,
+                        const CXXLAPACK_INT &n,
+                        float *A, const CXXLAPACK_INT &ldA,
+                        CXXLAPACK_INT *ipiv);
+
 
 
 
@@ -69,6 +74,11 @@ namespace LAPACK
                          double &scond,
                          double &amax);
 
+    CXXLAPACK_INT getrf(const CXXLAPACK_INT &m,
+                        const CXXLAPACK_INT &n,
+                        double *A, const CXXLAPACK_INT &ldA,
+                        CXXLAPACK_INT *ipiv);
+
 
 
     // std::complex<float> variants of LAPACK functions
@@ -103,6 +113,11 @@ namespace LAPACK
                          float &scond,
                          float &amax);
 
+    CXXLAPACK_INT getrf(const CXXLAPACK_INT &m,
+                        const CXXLAPACK_INT &n,
+                        std::complex<float> *A, const CXXLAPACK_INT &ldA,
+                        CXXLAPACK_INT *ipiv);
+
 
 
     // std::complex<double> variants of LAPACK functions
@@ -136,6 +151,10 @@ namespace LAPACK
                          double *s,
                          double &scond,
                          double &amax);
+
+    CXXLAPACK_INT getrf(const CXXLAPACK_INT &m,
+                        const CXXLAPACK_INT &n,
+                        std::complex<double> *A, const CXXLAPACK_INT &ldA,
+                        CXXLAPACK_INT *ipiv);
 }
 #endif
-

@@ -11,6 +11,7 @@ add_library(cxxlapack LAPACK_compatability.f90
                       Auxiliary/lartg.cpp
                       Auxiliary/lanhe.cpp
                       Auxiliary/laqhe.cpp
+                      LinearEquation/getrf.cpp
                       LinearEquation/tptrs.cpp
                       LinearEquation/potrf.cpp
                       LinearEquation/potrs.cpp
